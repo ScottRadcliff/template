@@ -24,5 +24,6 @@ It will configure the following:
 * Copy over base stylesheets and update application.css
 * Create an application template
 * Fonts?
+* ActionMailer settings
 
 
