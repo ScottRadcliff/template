@@ -41,4 +41,13 @@ end
 run "rails generate clearance:routes"
 run "rails generate clearance:views"
 
+# Generate spec directory and kill test directory
+run "rails generate rspec:install"
+remove_dir "test"
+
+
+# TODO:
+# [ ] Copy CSS files
+# [ ] Generate new layout with instructions
+# [ ] Configure generators
 
