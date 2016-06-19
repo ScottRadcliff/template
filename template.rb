@@ -29,8 +29,14 @@ run "rails generate clearance:install"
 rake "db:migrate"
 
 # Routes
-# remove_file "config/routes.rb"
-# run "touch config/routes.rb"
+inside 'config' do 
+  remove_file "routes.rb"
+  create_file "routes.rb" do <<-EOF
+Rails.application.routes.draw do
+end
+EOF
+  end
+end
 
 run "rails generate clearance:routes"
 run "rails generate clearance:views"
